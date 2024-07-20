@@ -1,2 +1,2 @@
 # nowinnews-ktor-server
-a backed project for mobile App created by ktor-server
+a backend project for mobile App created by ktor-server

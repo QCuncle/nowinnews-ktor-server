@@ -6,7 +6,7 @@
       "popularity": "//*[@id='sanRoot']//div[2]//div[2]/div[*]/div[1]/div[2]/text()[1]",
       "position": "//*[@id='sanRoot']//div[2]//div[2]/div[*]/a/div[1]/text()[1]",
       "title": "//*[@id='sanRoot']//div[2]//div[2]/div[*]/div[2]/a/div[1]/text()[1]",
-      "url": "//*[@id='sanRoot']//div[2]//div[2]/div[*]/div[2]/a/@href"
+      "url": "//*[@id='sanRoot']/main/div[2]/div/div[2]/div[*]/div[2]/a/@href"
     },
     "host": "https://top.baidu.com",
     "code": "baidu",
@@ -108,7 +108,7 @@
       "popularity": "//*[@id='root']//div[@class='HotList-itemMetrics']/text()[1]",
       "position": "//*[@id='root']//div/a[*]/div[1]/div[1]/text()[1]",
       "title": "//*[@id='root']//div/a[*]/div[2]/div[1]/text()[1]",
-      "url": "//*[@id='root']//div/a[*]"
+      "url": "//*[@id='root']//div/a[*]/@data-za-extra-module"
     },
     "host": "https://www.zhihu.com/question",
     "code": "zhihu",

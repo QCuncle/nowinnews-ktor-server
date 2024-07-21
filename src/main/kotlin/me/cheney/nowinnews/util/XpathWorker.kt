@@ -25,7 +25,6 @@ class XpathWorker(
                 try {
                     val siteConfigs = siteService.getAllSiteConfigs()
                     val siteNewsList = xpathService.executeXpathProcess(siteConfigs)
-                    println(siteNewsList.toString())
                     newsService.upsertSiteNews(siteNewsList)
                     // 重置错误计数器
                     errorCount = 0

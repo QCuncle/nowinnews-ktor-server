@@ -20,7 +20,6 @@ class XpathServiceImpl(
             contentType(ContentType.Application.Json)
             setBody(Json.encodeToString(siteConfigs))
         }.body<String>()
-        println(response)
         return Json.decodeFromString<List<SiteNews>>(response)
     }
 }

@@ -23,9 +23,14 @@ class XpathWorker(
 
             while (isActive) {
                 try {
-                    val siteConfigs = siteService.getAllSiteConfigs()
-                    val siteNewsList = xpathService.executeXpathProcess(siteConfigs)
-                    newsService.upsertSiteNews(siteNewsList)
+                    siteService.getAllSiteConfigs().map { siteConfig ->
+                        async {
+                            val siteNews = xpathService.executeXpathProcess(siteConfig)
+                            siteNews?.let {
+                                newsService.upsertSiteNews(arrayListOf(it))
+                            }
+                        }
+                    }
                     // 重置错误计数器
                     errorCount = 0
                 } catch (e: Exception) {
